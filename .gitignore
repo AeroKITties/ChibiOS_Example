@@ -55,4 +55,5 @@ dkms.conf
 /build
 
 # VS code settings
-.vscode
+.vscode/launch.json
+.vscode/settings.json
