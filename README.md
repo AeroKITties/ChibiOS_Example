@@ -28,6 +28,13 @@
     - pacman -S make
   - Команды в MSYS2 такие же как в linux (cd, ls, ...)
   - [Видео с установкой gcc-arm-none-eabi и msys2](https://youtu.be/-p26X8lTAvo)
+- Установка репозитория 
+  - через консоль
+    - git clone https://github.com/AeroKITties/ChibiOS_Example
+    - cd ChibiOS_Example
+    - git submodule update --init --recursive
+  - через Github Desktop
+    - file -> Clone repository -> URL -> https://github.com/AeroKITties/ChibiOS_Example -> Clone
 
 ## Сборка
 ### Linux:
