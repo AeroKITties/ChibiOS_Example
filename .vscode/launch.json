@@ -10,6 +10,7 @@
             "servertype": "jlink",
             "device": "STM32F411RE",
             "gdbTarget": "localhost:50000",
+            //"ipAddress": "25.36.227.249",
             "interface": "swd",
             "serialNumber": "",
             "runToMain": true,
