@@ -1,10 +1,10 @@
 {
     "cortex-debug.gdbPath.windows": "C:/gcc-arm-none-eabi/bin/arm-none-eabi-gdb",
-    "cortex-debug.gdbPath.linux": null,
+    "cortex-debug.gdbPath.linux": "/home/username/gcc-arm-none-eabi/bin/arm-none-eabi-gdb",
 
     "cortex-debug.armToolchainPath.windows": "C:/gcc-arm-none-eabi/bin/",
-    "cortex-debug.armToolchainPath.linux": null,
+    "cortex-debug.armToolchainPath.linux": "/home/username/gcc-arm-none-eabi/bin/",
 
     "cortex-debug.JLinkGDBServerPath.windows": "C:/Program Files/SEGGER/JLink/JLinkGDBServerCL",
-    "cortex-debug.JLinkGDBServerPath.linux": null
+    "cortex-debug.JLinkGDBServerPath.linux": "/opt/SEGGER/JLink_V788m/JLinkGDBServerCLEx"
 }
