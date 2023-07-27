@@ -18,6 +18,7 @@
 #include "hal.h"
 #include "rt_test_root.h"
 #include "oslib_test_root.h"
+#include "submodules/print_lib/print_lib.h"
 
 /*
  * Green LED blinker thread, times are in milliseconds.
@@ -29,6 +30,7 @@ static THD_FUNCTION(Thread1, arg) {
   chRegSetThreadName("blinker");
   while (true) {
     palClearPad(GPIOA, GPIOA_LED_GREEN);
+    printString("Hello from Nucleo64!\n");
     chThdSleepMilliseconds(500);
     palSetPad(GPIOA, GPIOA_LED_GREEN);
     chThdSleepMilliseconds(500);
