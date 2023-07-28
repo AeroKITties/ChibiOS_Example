@@ -18,7 +18,7 @@
 #include "hal.h"
 #include "rt_test_root.h"
 #include "oslib_test_root.h"
-#include "submodules/print_lib/print_lib.h"
+#include "submodules/DebugLib/print_lib.h"
 
 /*
  * Green LED blinker thread, times are in milliseconds.
