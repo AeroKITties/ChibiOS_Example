@@ -94,6 +94,7 @@ CONFDIR  := ./cfg
 BUILDDIR := ./build
 DEPDIR   := ./.dep
 DEBUGLIB := ./submodules/DebugLib
+CPPEXAMPLELIB := ./submodules/CppExampleLib
 
 # Licensing files.
 include $(CHIBIOS)/os/license/license.mk
@@ -115,6 +116,8 @@ include $(CHIBIOS)/test/rt/rt_test.mk
 include $(CHIBIOS)/test/oslib/oslib_test.mk
 # Debug lib
 include $(DEBUGLIB)/debuglib.mk
+# Cpp example lib
+include $(CPPEXAMPLELIB)/cppexamplelib.mk
 
 # Define linker script file here
 LDSCRIPT= $(STARTUPLD)/STM32F411xE.ld
