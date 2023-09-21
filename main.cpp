@@ -14,23 +14,25 @@
     limitations under the License.
 */
 
-#include "ch.h"
+#include "ch.hpp"
 #include "hal.h"
 #include "rt_test_root.h"
 #include "oslib_test_root.h"
-#include "submodules/DebugLib/print_lib.h"
+// #include "submodules/DebugLib/print_lib.h"
 
 /*
  * Green LED blinker thread, times are in milliseconds.
  */
 static THD_WORKING_AREA(waThread1, 128);
-static THD_FUNCTION(Thread1, arg) {
+static THD_FUNCTION(Thread1, arg)
+{
 
   (void)arg;
   chRegSetThreadName("blinker");
-  while (true) {
+  while (true)
+  {
     palClearPad(GPIOA, GPIOA_LED_GREEN);
-    printString("Hello from Nucleo64!\n");
+    // printString("Hello from Nucleo64!\n");
     chThdSleepMilliseconds(500);
     palSetPad(GPIOA, GPIOA_LED_GREEN);
     chThdSleepMilliseconds(500);
@@ -40,7 +42,8 @@ static THD_FUNCTION(Thread1, arg) {
 /*
  * Application entry point.
  */
-int main(void) {
+int main(void)
+{
 
   /*
    * System initializations.
@@ -66,8 +69,10 @@ int main(void) {
    * Normal main() thread activity, in this demo it does nothing except
    * sleeping in a loop and check the button state.
    */
-  while (true) {
-    if (!palReadPad(GPIOC, GPIOC_BUTTON)) {
+  while (true)
+  {
+    if (!palReadPad(GPIOC, GPIOC_BUTTON))
+    {
       test_execute((BaseSequentialStream *)&SD2, &rt_test_suite);
       test_execute((BaseSequentialStream *)&SD2, &oslib_test_suite);
     }
