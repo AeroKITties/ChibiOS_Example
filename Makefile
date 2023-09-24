@@ -15,7 +15,7 @@ endif
 
 # C++ specific options here (added to USE_OPT).
 ifeq ($(USE_CPPOPT),)
-  USE_CPPOPT = -fno-rtti
+  USE_CPPOPT = -std=gnu++11 -fno-exceptions -fno-rtti
 endif
 
 # Enable this if you want the linker to remove unused code and data.
@@ -94,6 +94,7 @@ CONFDIR  := ./cfg
 BUILDDIR := ./build
 DEPDIR   := ./.dep
 DEBUGLIB := ./submodules/DebugLib
+CPPEXAMPLELIB := ./submodules/CppExampleLib
 
 # Licensing files.
 include $(CHIBIOS)/os/license/license.mk
@@ -113,8 +114,11 @@ include $(CHIBIOS)/tools/mk/autobuild.mk
 include $(CHIBIOS)/os/test/test.mk
 include $(CHIBIOS)/test/rt/rt_test.mk
 include $(CHIBIOS)/test/oslib/oslib_test.mk
+include $(CHIBIOS)/os/various/cpp_wrappers/chcpp.mk
 # Debug lib
 include $(DEBUGLIB)/debuglib.mk
+# Cpp example lib
+include $(CPPEXAMPLELIB)/cppexamplelib.mk
 
 # Define linker script file here
 LDSCRIPT= $(STARTUPLD)/STM32F411xE.ld
@@ -122,12 +126,12 @@ LDSCRIPT= $(STARTUPLD)/STM32F411xE.ld
 # C sources that can be compiled in ARM or THUMB mode depending on the global
 # setting.
 CSRC = $(ALLCSRC) \
-       $(TESTSRC) \
-       main.c
+       $(TESTSRC)
 
 # C++ sources that can be compiled in ARM or THUMB mode depending on the global
 # setting.
-CPPSRC = $(ALLCPPSRC)
+CPPSRC = $(ALLCPPSRC) \
+         main.cpp 
 
 # List ASM source files here.
 ASMSRC = $(ALLASMSRC)

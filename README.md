@@ -27,20 +27,20 @@
   - [download](https://www.msys2.org/)
   - Установка в C: (путь по умолчанию)
   - В консоли MSYS2 MSYS (фиолетовая иконка) вводим слeдующие команды:
-    - ```sh pacman -S git```
-    - ```sh pacman -S make```
+    - ```pacman -S git```
+    - ```pacman -S make```
   - Команды в MSYS2 такие же как в linux (cd, ls, ...)
     - Команда перехода в нужный диск: cd <название диска>:
-      -  Пример - ```sh cd C:```
-   - переход в папку: ```sh cd <название папки>```
+      -  Пример - ```cd C:```
+   - переход в папку: ```cd <название папки>```
    - переход на 1 уровень наверх: ```sh cd ..```
-   - просмотр содержимого: ```sh ls```
+   - просмотр содержимого: ```ls```
 - [Видео с установкой gcc-arm-none-eabi и msys2](https://youtu.be/-p26X8lTAvo)
 - Установка репозитория 
   - через консоль
-    - ```sh git clone https://github.com/AeroKITties/ChibiOS_Example```
-    - ```sh cd ChibiOS_Example```
-    - ```sh git submodule update --init --recursive```
+    - ```git clone https://github.com/AeroKITties/ChibiOS_Example```
+    - ```cd ChibiOS_Example```
+    - ```git submodule update --init --recursive```
   - через Github Desktop
     - file -> Clone repository -> URL -> https://github.com/AeroKITties/ChibiOS_Example -> Clone
     - В этом случае все подмодули скачаются автоматически.

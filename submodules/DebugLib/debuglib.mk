@@ -1,2 +1,2 @@
-ALLCSRC += ${DEBUGLIB}/print_lib.c
+ALLCPPSRC += ${DEBUGLIB}/print_lib.cpp
 ALLINC += ${DEBUGLIB}
